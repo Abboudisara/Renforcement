@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+    "compression-sass": "node-sass -w sass -o css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abboudisara/Renforcement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abboudisara/Renforcement/issues"
+  },
+  "homepage": "https://github.com/Abboudisara/Renforcement#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

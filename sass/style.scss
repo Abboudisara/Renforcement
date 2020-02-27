@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow', ;
+}
+
+$color1:hsl(0, 100%, 68%);
+$color2: hsl(230, 29%, 20%);
+$color3:hsl(230, 11%, 40%);
+$color4:hsl(231, 7%, 65%);
+$color5:hsl(207, 33%, 95%);
+
+.logo-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.logo {
+    position: absolute;
+    left: 8%;
+}
+
+
+ul {
+    width: 25%;
+    background-color: $color5;
+    float: right;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+
+    .point {
+        color: $color4;
+        font-size: 3vw;
+        position: absolute;
+        top: 7%;
+        right: 14%;
+    }
+
+
+    li {
+        display: inline-block;
+        list-style: none;
+
+
+        a {
+            text-decoration: none;
+            color: $color2;
+            text-transform: uppercase;
+
+        }
+    }
+
+}
+
+.login {
+    color: $color4;
+    text-transform: uppercase;
+}
+
+.background-right {
+    height: 50%;
+    width: 43%;
+    border-radius: 0 0 0 50px;
+    background-color: $color5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+}
+
+.img {
+    height: 52%;
+    width: 45%;
+    position: absolute;
+    right: -4%;
+    bottom: 12%;
+}
+
+.background-left {
+    background-color: white;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-left: 8%;
+
+    .information__button {
+        height: 5%;
+        width: 3%;
+        border-radius: 50px;
+        border: none;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .information__titre {
+        position: absolute;
+        right: 79%;
+        color: $color4;
+        text-transform: uppercase;
+
+    }
+
+    .informaion__titre--paragraphe {
+        text-transform: uppercase;
+        font-size: 3vw;
+        min-width: 8%;
+        font-style: bold;
+        color: $color2;
+        margin-top: 2%;
+    }
+
+    .informaion__titre--paragraphe1 {
+        color: $color3;
+        font-size: 90%;
+        margin-top: 2%;
+    }
+
+    .information__button--style {
+        height: 2vw;
+        width: 10%;
+        background-color: $color1;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin-top: 3%;
+    }
+
+    .information__titre--position {
+        text-transform: uppercase;
+        color: $color4;
+        position: absolute;
+        top: 75%;
+        right: 73%
+    }
+
+}

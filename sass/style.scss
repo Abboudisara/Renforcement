@@ -19,9 +19,6 @@ $color5:hsl(207, 33%, 95%);
 
 body {
     overflow: hidden;
-    font-family: 'Barlow',
-        font-size 180%;
-
 }
 
 .logo-menu {
@@ -116,31 +113,30 @@ ul {
     flex-direction: row-reverse;
     margin-top: 5%;
     margin-left: 8%;
+    font-family: " Barlow";
 
     @media(max-width:375px) {
         margin-left: 10%;
+        padding-top: 40%;
 
     }
 
     &__image {
         width: 50%;
         overflow: hidden;
+        z-index: -1;
 
         @media (max-width:375px) {
             width: 125%;
             position: absolute;
-            top: 10%;
+            top: 20%;
             left: 20%;
+            height: 90%;
         }
 
         img {
             width: 130%;
             z-index: -1;
-
-            @media(max-width:375px) {
-                height: 90%;
-
-            }
 
         }
     }
@@ -162,14 +158,9 @@ ul {
         color: white;
         text-transform: uppercase;
 
-        @media(max-width:920px) {
-            height: 7%;
-            width: 4%;
-        }
-
         @media(max-width:375px) {
-            width: 15%;
-            padding: 5px;
+            width: 20%;
+            padding: 10px;
         }
     }
 
@@ -179,11 +170,10 @@ ul {
         top: -17px;
         color: $color4;
         text-transform: uppercase;
-        letter-spacing: 4px;
-
 
         @media(max-width:375px) {
-            margin-left: 15%;
+            margin-left: 19%;
+            margin-top: -4%;
         }
     }
 
@@ -198,6 +188,8 @@ ul {
 
         @media(max-width:375px) {
             font-size: 8vw;
+            margin-top: 5%;
+
 
         }
     }
@@ -209,7 +201,8 @@ ul {
 
         @media(max-width:375px) {
             margin-top: 3%;
-            font-size: 5VW;
+            font-size: 6.5VW;
+            margin-top: 5%;
         }
     }
 
@@ -226,8 +219,8 @@ ul {
         padding: 1rem;
 
         @media(max-width:920px) {
-            height: 5vw;
-            max-width: 20%;
+            padding: 10%;
+            width: 20vw;
         }
 
         @media(max-width:700px) {
@@ -240,8 +233,9 @@ ul {
         @media(max-width:375px) {
             width: 200vw;
             height: 10vw;
-            max-width: 55vw;
-            padding: 25px;
+            max-width: 65%;
+            padding: 30px;
+            font-size: 50%;
         }
     }
 
@@ -251,7 +245,7 @@ ul {
         position: relative;
         right: -18vw;
         bottom: 25px;
-        letter-spacing: 3px;
+
 
         @media(max-width:920px) {
             position: relative;
@@ -265,10 +259,20 @@ ul {
         }
 
         @media(max-width:375px) {
-            margin-left: 45px;
+            margin-left: 50px;
+            margin-top: -3%;
         }
     }
 
+}
+
+#check {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 90%;
+    z-index: 5;
+    opacity: 0;
 }
 
 @media(max-width:920px) {
@@ -291,15 +295,9 @@ ul {
             width: 25px;
             height: 25px;
             position: absolute;
-            left: 90%;
+            left: 135VW;
             z-index: 5;
-            opacity: 0;
-
-            @media(max-width:375px) {
-                z-index: 20;
-            }
-
-
+            opacity: 0.1;
 
             &:checked+ul {
                 display: flex;
@@ -313,7 +311,14 @@ ul {
                 z-index: 10;
 
                 @media(max-width:375px) {
-                    z-index: 20;
+
+                    background-color: white;
+                    max-width: 300%;
+                    height: 60%;
+                    width: 90%;
+                    position: absolute;
+                    left: 20%;
+                    margin-top: 20%;
                 }
 
 
@@ -329,7 +334,6 @@ ul {
 
         .login {
             border-top: $color4 solid 1px;
-            margin-top: 30%;
         }
     }
 }

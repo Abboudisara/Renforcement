@@ -8,7 +8,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Barlow', ;
+
 }
 
 $color1:hsl(0, 100%, 68%);
@@ -17,6 +17,12 @@ $color3:hsl(230, 11%, 40%);
 $color4:hsl(231, 7%, 65%);
 $color5:hsl(207, 33%, 95%);
 
+body {
+    overflow: hidden;
+    font-family: 'Barlow',
+        font-size 180%;
+
+}
 
 .logo-menu {
     display: flex;
@@ -60,6 +66,8 @@ ul {
 .login {
     color: $color4;
     text-transform: uppercase;
+    right: 50%;
+    top: 16%;
 
     &::before {
         content: '';
@@ -67,10 +75,10 @@ ul {
         width: 5px;
         border-radius: 50%;
         background: $color4;
-        position: absolute;
+        position: relative;
         display: flex;
-        right: 14%;
-        top: 9.5%;
+        right: 50%;
+        top: 6%;
 
         @include desktop() {
             top: 12.5%;
@@ -84,8 +92,8 @@ ul {
 
 
 .background-right {
-    height: 50%;
-    width: 43%;
+    height: 50vh;
+    width: 50%;
     border-radius: 0 0 0 50px;
     background-color: $color5;
     position: absolute;
@@ -93,35 +101,61 @@ ul {
     right: 0;
     z-index: -10;
 
+    @media(max-width:375px) {
+        height: 80%;
+        width: 70%;
+        right: -45%;
+    }
+
 }
 
-.img {
-    height: 52%;
-    width: 45%;
-    position: absolute;
-    right: -4%;
-    bottom: 12%;
-    z-index: -1;
-}
-
-.background-left {
-    background-color: white;
-    height: 50%;
-    width: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-}
 
 .information {
-
-    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 5%;
     margin-left: 8%;
 
+    @media(max-width:375px) {
+        margin-left: 10%;
+
+    }
+
+    &__image {
+        width: 50%;
+        overflow: hidden;
+
+        @media (max-width:375px) {
+            width: 125%;
+            position: absolute;
+            top: 10%;
+            left: 20%;
+        }
+
+        img {
+            width: 130%;
+            z-index: -1;
+
+            @media(max-width:375px) {
+                height: 90%;
+
+            }
+
+        }
+    }
+
+    .flex {
+        padding-top: 5%;
+
+        @media(max-width:375px) {
+            padding-top: 160px;
+        }
+    }
+
     &__button {
-        height: 5%;
-        width: 3%;
+        height: 7%;
+        width: 12%;
         border-radius: 50px;
         border: none;
         background-color: black;
@@ -134,24 +168,24 @@ ul {
         }
 
         @media(max-width:375px) {
-            height: 10%;
-            width: 10%;
+            width: 15%;
+            padding: 5px;
         }
     }
 
     &__titre {
         position: relative;
-        right: -4vw;
-        top: -14px;
+        right: -6vw;
+        top: -17px;
         color: $color4;
         text-transform: uppercase;
+        letter-spacing: 4px;
+
 
         @media(max-width:375px) {
-            margin-left: 10%;
+            margin-left: 15%;
         }
     }
-
-
 
     .informaion__titre--paragraphe {
         text-transform: uppercase;
@@ -161,31 +195,34 @@ ul {
         color: $color2;
         margin-top: 2%;
 
+
         @media(max-width:375px) {
-            font-size: 7vw;
+            font-size: 8vw;
 
         }
     }
 
     .informaion__titre--paragraphe1 {
         color: $color3;
-        font-size: 90%;
+        font-size: 1;
         margin-top: 2%;
 
         @media(max-width:375px) {
             margin-top: 3%;
+            font-size: 5VW;
         }
     }
 
     .information__button--style {
-        height: 3vw;
-        max-width: 13%;
+        height: 4vw;
+        max-width: 80%;
+        width: 50%;
         background-color: $color1;
         border: none;
         color: white;
         border-radius: 5px;
         text-transform: uppercase;
-        margin-top: 3%;
+        margin-top: 7%;
         padding: 1rem;
 
         @media(max-width:920px) {
@@ -195,8 +232,16 @@ ul {
 
         @media(max-width:700px) {
             height: 2.5vw;
-            max-width: 49%;
-            padding: 15PX;
+            max-width: 50%;
+            padding: 20PX 25PX;
+            margin-top: 25px;
+        }
+
+        @media(max-width:375px) {
+            width: 200vw;
+            height: 10vw;
+            max-width: 55vw;
+            padding: 25px;
         }
     }
 
@@ -204,8 +249,9 @@ ul {
         text-transform: uppercase;
         color: $color4;
         position: relative;
-        right: -13vw;
-        bottom: 23px;
+        right: -18vw;
+        bottom: 25px;
+        letter-spacing: 3px;
 
         @media(max-width:920px) {
             position: relative;
@@ -214,8 +260,12 @@ ul {
         }
 
         @media(max-width:700px) {
-            left: 57%;
+            left: 54%;
             bottom: 23px;
+        }
+
+        @media(max-width:375px) {
+            margin-left: 45px;
         }
     }
 
@@ -231,6 +281,10 @@ ul {
             content: url(../images/icon-hamburger.svg);
             position: absolute;
             left: 90%;
+
+            @media(max-width:375px) {
+                left: 135%;
+            }
         }
 
         #check {
@@ -239,7 +293,13 @@ ul {
             position: absolute;
             left: 90%;
             z-index: 5;
-            opacity: 0.1;
+            opacity: 0;
+
+            @media(max-width:375px) {
+                z-index: 20;
+            }
+
+
 
             &:checked+ul {
                 display: flex;
@@ -251,6 +311,11 @@ ul {
                 justify-content: center;
                 align-items: center;
                 z-index: 10;
+
+                @media(max-width:375px) {
+                    z-index: 20;
+                }
+
 
                 li {
                     padding: 10%;
@@ -278,27 +343,10 @@ ul {
         @media(max-width:375px) {
             display: flex;
             margin-top: 70%;
-            // margin-left:20% ;
-        }
-
-        .img {
-            position: relative;
-            left: 55%;
-            width: 50%;
-
-            @media(max-width:375px) {
-                display: flex;
-                flex-direction: column;
-                justify-content: left;
-                flex-wrap: wrap;
-                position: absolute;
-                margin-bottom: 65%;
-                height: 30%;
-                width: 90%;
-                left: 20%;
-            }
 
         }
+
+
     }
 
 }
